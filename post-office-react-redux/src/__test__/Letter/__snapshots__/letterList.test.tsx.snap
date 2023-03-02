@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Letters page correctly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="letterList "
+    style="align-items: center; display: flex; flex-direction: column;"
+  />
+</DocumentFragment>
+`;

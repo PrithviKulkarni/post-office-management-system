@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Update Parcel page correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <h3
+      class="text-center text-light"
+    >
+       Edit the parcel 
+    </h3>
+    <form
+      class="updateParcel"
+      data-testid="updateParcelTest"
+    >
+      <div
+        class="mb-3 input-group"
+      >
+        <span
+          class="input-group-text"
+          id="basic-addon1"
+        >
+          Parcel no
+        </span>
+        <input
+          aria-describedby="basic-addon1"
+          class="form-control form-control-sm"
+          data-testid="parcelNoInput"
+          name="parcel_no"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="mb-3 input-group"
+      >
+        <span
+          class="input-group-text"
+          id="basic-addon1"
+        >
+          Parcel Weight(kg)
+        </span>
+        <input
+          aria-describedby="basic-addon1"
+          class="form-control form-control-sm"
+          data-testid="weightInput"
+          name="parcel_weight"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="mb-3 input-group"
+      >
+        <span
+          class="input-group-text"
+          id="basic-addon1"
+        >
+          Status
+        </span>
+        <input
+          aria-describedby="basic-addon1"
+          class="form-control form-control-sm"
+          data-testid="statusInput"
+          name="status"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="mb-3 input-group"
+      >
+        <span
+          class="input-group-text"
+          id="basic-addon1"
+        >
+          Estimated delivery (in days)
+        </span>
+        <input
+          aria-describedby="basic-addon1"
+          class="form-control form-control-sm"
+          data-testid="eddInput"
+          name="estimated_delivery_days"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        class="btn btn-primary"
+        data-testid="updateButton"
+        type="submit"
+      >
+        Edit Parcel
+      </button>
+      <p />
+    </form>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Create Letter page correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="createLetter"
+    data-testid="createLetter"
+  >
+    <form
+      class=""
+      style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;"
+    >
+      <div
+        class="mb-3"
+      >
+        <label
+          class="form-label"
+          for="formMessageFrom"
+        >
+          Address
+        </label>
+        <input
+          class="form-control"
+          data-testid="address-input"
+          id="formMessageFrom"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="mb-3"
+      >
+        <label
+          class="form-label"
+          for="formMessageContent"
+        >
+          Delivery Class
+        </label>
+        <input
+          class="form-control"
+          data-testid="delivery-input"
+          id="formMessageContent"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        class="createButton btn btn-primary"
+        data-testid="createButton"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

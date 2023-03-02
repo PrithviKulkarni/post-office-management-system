@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Depot create page render test 1`] = `
+<DocumentFragment>
+  <div
+    class="createDepot"
+    data-testid="createDepot"
+  >
+    <div
+      class="container"
+    >
+      <form
+        class=""
+      >
+        <div
+          class="mb-3 input-group"
+        >
+          <span
+            class="input-group-text"
+            id="basic-addon1"
+          >
+            Depot City
+          </span>
+          <input
+            aria-describedby="basic-addon1"
+            class="form-control form-control-sm"
+            data-testid="cityIn"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="mb-3 input-group"
+        >
+          <span
+            class="input-group-text"
+            id="basic-addon1"
+          >
+            Number of workers
+          </span>
+          <input
+            aria-describedby="basic-addon1"
+            class="form-control form-control-sm"
+            data-testid="workersIn"
+            type="text"
+            value="0"
+          />
+        </div>
+        <button
+          class="button btn btn-primary"
+          data-testid="button"
+          type="submit"
+        >
+          Create Depot
+        </button>
+        <p />
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

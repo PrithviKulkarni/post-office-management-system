@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Edit Letter page correctly 1`] = `
+<DocumentFragment>
+  <form
+    class="editLetter"
+    data-testid="editLetter"
+    style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;"
+  >
+    <div
+      class="mb-3"
+    >
+      <label
+        class="form-label"
+        for="formMessageFrom"
+      >
+        Address
+      </label>
+      <input
+        class="form-control"
+        data-testid="address-input"
+        id="formMessageFrom"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <label
+        class="form-label"
+        for="formMessageContent"
+      >
+        Delivery Class
+      </label>
+      <input
+        class="form-control"
+        data-testid="delivery-input"
+        id="formMessageContent"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <label
+        class="form-label"
+        for="formMessageContent"
+      >
+        Delivered
+      </label>
+      <input
+        class="form-control"
+        data-testid="delivered-input"
+        id="formMessageContent"
+        type="text"
+        value="undefined"
+      />
+    </div>
+    <button
+      class="btn btn-primary"
+      data-testid="editButton"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</DocumentFragment>
+`;

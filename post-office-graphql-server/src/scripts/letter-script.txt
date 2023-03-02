@@ -1,0 +1,72 @@
+db.letters.insertMany([
+	{
+		"address": "Ashtree House, Cadley Hill Road, Swadlincote",
+		"delivery_class": "First Class",
+		"delivered": true,
+		"dispatched": new ISODate("2022-08-10T10:00:00")
+	},
+	{
+		"address": "Flat 6, Rushwood House, Hartland Road, Addlestone",
+		"delivery_class": "Second Class",
+		"delivered": false,
+		"dispatched": new ISODate("2022-06-16T10:00:00")
+	},
+	{
+		"address": "52 High Street, St Martins",
+		"delivery_class": "Second Class",
+		"delivered": false,
+		"dispatched": new ISODate("2022-07-18T10:00:00")
+	},	
+	{
+		"address": "7 Lilac Terrace, Bacup",
+		"delivery_class": "First Class",
+		"delivered": true,
+		"dispatched": new ISODate("2022-08-14T10:00:00")
+	},
+	{
+		"address": "74 Norlington Road, London",
+		"delivery_class": "First Class",
+		"delivered": false,
+		"dispatched": new ISODate("2022-06-18T10:00:00")
+	},
+	{
+		"address": "3 St Lukes Cottages, London Road, Swanley",
+		"delivery_class": "Second Class",
+		"delivered": true,
+		"dispatched": new ISODate("2022-05-18T10:00:00")
+	},
+	{
+		"address": "5 Waller Street, Leamington Spa",
+		"delivery_class": "First Class",
+		"delivered": false,
+		"dispatched": new ISODate("2022-08-23T10:00:00")
+	},
+	{
+		"address": "1 Shannon Close, Brighouse",
+		"delivery_class": "Second Class",
+		"delivered": true,
+		"dispatched": new ISODate("2022-08-25T10:00:00")
+	},
+	{
+		"address": "18 St Stephens Road, Canterbury",
+		"delivery_class": "First Class",
+		"delivered": false,
+		"dispatched": new ISODate("2022-02-24T10:00:00")
+	},
+	{
+		"address": "32 Coltsfoot Path, Romford",
+		"delivery_class": "Second Class",
+		"delivered": true,
+		"dispatched": new ISODate("2022-06-06T10:00:00")
+	}	])
+	
+//Operators
+
+//Find the number of documents in the collection
+1. db.letters.countDocuments()
+
+//Find letters that have been delivered
+2. db.letters.find({ "delivered": "True" })
+
+//Find letters that are first class OR second class
+3. db.letters.find({ $or: [{ "delivery_class": "First Class" }, { "delivery_class": "Second Class" }] })

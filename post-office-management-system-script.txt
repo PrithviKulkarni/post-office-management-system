@@ -1,0 +1,362 @@
+use PostOfficeManagementSystem
+
+
+db.letters.insertMany([
+	{
+		"address": "Ashtree House, Cadley Hill Road, Swadlincote",
+		"delivery_class": "First Class",
+		"delivered": true,
+		"dispatched": new ISODate("2022-08-10T10:00:00")
+	},
+	{
+		"address": "Flat 6, Rushwood House, Hartland Road, Addlestone",
+		"delivery_class": "Second Class",
+		"delivered": false,
+		"dispatched": new ISODate("2022-06-16T10:00:00")
+	},
+	{
+		"address": "52 High Street, St Martins",
+		"delivery_class": "Second Class",
+		"delivered": false,
+		"dispatched": new ISODate("2022-07-18T10:00:00")
+	},	
+	{
+		"address": "7 Lilac Terrace, Bacup",
+		"delivery_class": "First Class",
+		"delivered": true,
+		"dispatched": new ISODate("2022-08-14T10:00:00")
+	},
+	{
+		"address": "74 Norlington Road, London",
+		"delivery_class": "First Class",
+		"delivered": false,
+		"dispatched": new ISODate("2022-06-18T10:00:00")
+	},
+	{
+		"address": "3 St Lukes Cottages, London Road, Swanley",
+		"delivery_class": "Second Class",
+		"delivered": true,
+		"dispatched": new ISODate("2022-05-18T10:00:00")
+	},
+	{
+		"address": "5 Waller Street, Leamington Spa",
+		"delivery_class": "First Class",
+		"delivered": false,
+		"dispatched": new ISODate("2022-08-23T10:00:00")
+	},
+	{
+		"address": "1 Shannon Close, Brighouse",
+		"delivery_class": "Second Class",
+		"delivered": true,
+		"dispatched": new ISODate("2022-08-25T10:00:00")
+	},
+	{
+		"address": "18 St Stephens Road, Canterbury",
+		"delivery_class": "First Class",
+		"delivered": false,
+		"dispatched": new ISODate("2022-02-24T10:00:00")
+	},
+	{
+		"address": "32 Coltsfoot Path, Romford",
+		"delivery_class": "Second Class",
+		"delivered": true,
+		"dispatched": new ISODate("2022-06-06T10:00:00")
+	}	])
+
+
+db.letters.countDocuments()
+
+
+db.letters.find({ "delivered": "True" })
+
+
+db.letters.find({ $or: [{ "delivery_class": "First Class" }, { "delivery_class": "Second Class" }] })
+
+
+
+db.parcels.insertOne({parcel_weight:5, status: "In transit", estimated_delivery_days: 3})
+
+
+db.parcels.insertMany([
+{parcel_weight:2, status:"Delivered", estimated_delivery_days:0},
+{parcel_weight:3, status:"In transit", estimated_delivery_days:2},
+{parcel_weight:1, status:"In transit", estimated_delivery_days:5},
+{parcel_weight:5, status:"In transit", estimated_delivery_days:1},
+{parcel_weight:6, status:"Delivered", estimated_delivery_days:0}, 
+{parcel_weight:7, status:"Out for delivery", estimated_delivery_days:14},
+{parcel_weight:8, status:"Out for delivery", estimated_delivery_days:8},
+{parcel_weight:9, status:"Out for delivery", estimated_delivery_days:9},
+{parcel_weight:10, status: "In transit", estimated_delivery_days:2}
+])
+
+
+db.parcels.find({status: {$eq:"Delivered"}})
+
+db.parcels.aggregate([{$sort: {estimated_delivery_days:1}}])
+
+db.parcels.find({"estimated_delivery_days": {$ge:10}})
+
+db.parcels.find({"estimated_delivery_days": {$ne:0}})
+
+db.parcels.updateMany({estimated_delivery_days: {$gte: 5}},
+{
+ $set:{status: "Out for delivery"}
+})
+
+
+db.drivers.insertMany([
+    {
+        "first_name": "Alvin",
+        "last_name": "Seville",
+        "email": "AlvinSeville@gmail.com",
+        "password": "d4eLjVHR"
+    },
+    {
+        "first_name": "Theodore",
+        "last_name": "Seville",
+        "email": "TheodoreSeville@gmail.com",
+        "password": "x8eErNP2"
+    },
+    {
+        "first_name": "Simon",
+        "last_name": "Seville",
+        "email": "SimonSeville@gmail.com",
+        "password": "naHAeqb8"
+    },
+])
+
+db.drivers.insertOne(
+{
+    "first_name": "Brittany",
+    "last_name": "Mill",
+    "email": "BrittanyMiller@gmail.com",
+    "password": "d4eLjVHR"
+})
+
+db.drivers.updateOne({"last_name": "Mill"},
+{
+    $set: {
+    "first_name": "Brittany",
+    "last_name": "Miller",
+    "email": "BrittanyMiller@gmail.com",
+    "password": "d4eLjVHR"
+    }
+})
+
+
+db.drivers.deleteOne(
+{
+    "first_name": "Brittany",
+    "last_name": "Miller",
+    "email": "BrittanyMiller@gmail.com",
+    "password": "d4eLjVHR"
+})
+
+
+
+db.drivers.find().sort({first_name: 1
+})
+
+db.drivers.find().sort({first_name: -1
+})
+
+db.drivers.countDocuments()
+
+db.drivers.find().limit(2)
+
+
+
+db.depots.insertMany([
+{
+ "city": "London",
+ "workers": 10,
+ "services": [
+              {"service": "Money Exchange"},
+              {"service": "Packaging"},
+              {"service": "International Delivery"}
+             ]
+},
+{
+ "city": "Manchester",
+ "workers": 20,
+ "services": [
+              {"service": "Money Exchange"},
+             ]
+},
+{
+ "city": "Newcastle",
+ "workers": 12,
+ "services": [
+              {"service": "Packaging"},
+              {"service": "International Delivery"}
+             ]
+},
+{
+ "city": "Liverpool",
+ "workers": 18,
+ "services": [
+              {"service": "Money Exchange"},
+              {"service": "Packaging"},
+              {"service": "International Delivery"},
+              {"service": "Priority Shipping"}
+             ]
+},
+{
+ "city": "Dover",
+ "workers": 19,
+ "services": [
+              {"service": "Container Shipping"}
+             ]
+},
+{
+ "city": "Leeds",
+ "workers": 25,
+ "services": [
+              {"service": "Money Exchange"},
+              {"service": "Packaging"},
+              {"service": "International Delivery"},
+              {"service": "Priority Shipping"},
+              {"service": "Returns"}
+             ]
+},
+{
+ "city": "Birmingham",
+ "workers": 8,
+ "services": [
+              {"service": "Lost and Found"}
+             ]
+},
+{
+ "city": "Nottingham",
+ "workers": 31,
+ "services": [
+              {"service": "Dangerous goods"},
+              {"service": "Packaging"},
+              {"service": "International Delivery"},
+              {"service": "Returns"}
+             ]
+},
+{
+ "city": "Brighton",
+ "workers": 22,
+ "services": [
+              {"service": "Animal transportation"},
+              {"service": "Container Shippinh"},
+              {"service": "International Delivery"},
+              {"service": "Priority Shipping"}
+             ]
+},
+{
+ "city": "Leicester",
+ "workers": 37,
+
+}
+])
+
+
+
+db.depots.find({workers:{$ne: 8}})
+
+
+db.depots.updateOne({workers:8}, {$inc: {workers: 12}}) 
+
+
+
+db.depots.updateOne({city: 'Birmingham'} , {$set:{workers: 8}}) 
+
+
+db.depots.find({services: {$exists: true}}) 
+
+
+db.depots.deleteMany({workers: {$lt: 20}}) 
+
+db.depots.remove({})
+
+db.depots.insertMany([
+{
+ "city": "London",
+ "workers": 10,
+ "services": [
+              {"service": "Money Exchange"},
+              {"service": "Packaging"},
+              {"service": "International Delivery"}
+             ]
+},
+{
+ "city": "Manchester",
+ "workers": 20,
+ "services": [
+              {"service": "Money Exchange"},
+             ]
+},
+{
+ "city": "Newcastle",
+ "workers": 12,
+ "services": [
+              {"service": "Packaging"},
+              {"service": "International Delivery"}
+             ]
+},
+{
+ "city": "Liverpool",
+ "workers": 18,
+ "services": [
+              {"service": "Money Exchange"},
+              {"service": "Packaging"},
+              {"service": "International Delivery"},
+              {"service": "Priority Shipping"}
+             ]
+},
+{
+ "city": "Dover",
+ "workers": 19,
+ "services": [
+              {"service": "Container Shipping"}
+             ]
+},
+{
+ "city": "Leeds",
+ "workers": 25,
+ "services": [
+              {"service": "Money Exchange"},
+              {"service": "Packaging"},
+              {"service": "International Delivery"},
+              {"service": "Priority Shipping"},
+              {"service": "Returns"}
+             ]
+},
+{
+ "city": "Birmingham",
+ "workers": 8,
+ "services": [
+              {"service": "Lost and Found"}
+             ]
+},
+{
+ "city": "Nottingham",
+ "workers": 31,
+ "services": [
+              {"service": "Dangerous goods"},
+              {"service": "Packaging"},
+              {"service": "International Delivery"},
+              {"service": "Returns"}
+             ]
+},
+{
+ "city": "Brighton",
+ "workers": 22,
+ "services": [
+              {"service": "Animal transportation"},
+              {"service": "Container Shippinh"},
+              {"service": "International Delivery"},
+              {"service": "Priority Shipping"}
+             ]
+},
+{
+ "city": "Leicester",
+ "workers": 37,
+
+}
+])
+
+

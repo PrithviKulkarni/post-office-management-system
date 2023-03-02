@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Delete Parcel page correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="deleteParcel container"
+    data-testid="deleteParcel"
+  >
+    <h4
+      class="text-center text-white"
+    >
+       Deleting the Parcel 
+    </h4>
+    <form
+      class=""
+    >
+      <div
+        class="mb-3 input-group"
+      >
+        <span
+          class="input-group-text"
+          id="basic-addon1"
+        >
+          Parcel no. 
+        </span>
+        <input
+          aria-describedby="basic-addon1"
+          aria-label="parcel_weight"
+          class="form-control form-control-sm"
+          name="parcel_no"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="mb-3 input-group"
+      >
+        <span
+          class="input-group-text"
+          id="basic-addon1"
+        >
+          Weight (kg)
+        </span>
+        <input
+          aria-describedby="basic-addon1"
+          aria-label="parcel_weight"
+          class="form-control form-control-sm"
+          name="parcel_weight"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="mb-3 input-group"
+      >
+        <span
+          class="input-group-text"
+          id="basic-addon1"
+        >
+          status
+        </span>
+        <input
+          aria-describedby="basic-addon1"
+          aria-label="status"
+          class="form-control form-control-sm"
+          name="status"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="mb-3 input-group"
+      >
+        <span
+          class="input-group-text"
+          id="basic-addon1"
+        >
+          estimated_delivery_days
+        </span>
+        <input
+          aria-describedby="basic-addon1"
+          aria-label="estimated_delivery_days"
+          class="form-control form-control-sm"
+          name="estimated_delivery_days"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        class="button btn btn-primary"
+        data-testid="parcelButton"
+        type="submit"
+      >
+        Delete Parcel Details
+      </button>
+      <p>
+         
+      </p>
+    </form>
+  </div>
+</DocumentFragment>
+`;

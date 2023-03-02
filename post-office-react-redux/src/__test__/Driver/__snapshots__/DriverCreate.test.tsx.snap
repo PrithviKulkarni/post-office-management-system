@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Creat Drivers Page Correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="create-driver"
+    data-testid="create-driver-test"
+  >
+    <div
+      class="container"
+    >
+      <form
+        class="create-driver-form"
+        data-testid="create-driver-form"
+        style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;"
+      >
+        <div
+          class="input-group"
+        >
+          <span
+            class="input-group-text"
+            id="basic-addon1"
+          >
+            First name
+          </span>
+          <input
+            aria-describedby="basic-addon1"
+            aria-label="fname"
+            class="fname form-control form-control-sm"
+            data-testid="create-driver-fname"
+            name="fname"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="input-group"
+        >
+          <span
+            class="input-group-text"
+            id="basic-addon1"
+          >
+            Last name
+          </span>
+          <input
+            aria-describedby="basic-addon1"
+            aria-label="lname"
+            class="lname form-control form-control-sm"
+            data-testid="create-driver-lname"
+            name="lname"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="input-group"
+        >
+          <span
+            class="input-group-text"
+            id="basic-addon1"
+          >
+            Username
+          </span>
+          <input
+            aria-describedby="basic-addon1"
+            aria-label="username"
+            class="username form-control form-control-sm"
+            data-testid="create-driver-username"
+            name="username"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="input-group"
+        >
+          <span
+            class="input-group-text"
+            id="basic-addon1"
+          >
+            Email
+          </span>
+          <input
+            aria-describedby="basic-addon1"
+            aria-label="email"
+            class="email form-control form-control-sm"
+            data-testid="create-driver-email"
+            name="email"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="input-group"
+        >
+          <span
+            class="input-group-text"
+            id="basic-addon1"
+          >
+            Password
+          </span>
+          <input
+            aria-describedby="basic-addon1"
+            aria-label="password"
+            class="password form-control form-control-sm"
+            data-testid="create-driver-password"
+            name="password"
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          class="btn btn-primary"
+          data-testid="driver-create-button"
+          type="submit"
+        >
+          Submit
+        </button>
+        <p />
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

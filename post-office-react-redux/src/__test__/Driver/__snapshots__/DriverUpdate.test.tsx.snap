@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Update Form Renders update Drivers Page Correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="update-driver"
+    data-testid="update-driver-test"
+  >
+    <div
+      class="container"
+    >
+      <form
+        class=""
+        style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;"
+      >
+        <div
+          class="input-group"
+        >
+          <span
+            class="input-group-text"
+            id="basic-addon1"
+          >
+            First name
+          </span>
+          <input
+            aria-describedby="basic-addon1"
+            aria-label="fname"
+            class="fname form-control form-control-sm"
+            data-testid="update-driver-fname"
+            name="fname"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="input-group"
+        >
+          <span
+            class="input-group-text"
+            id="basic-addon1"
+          >
+            Last name
+          </span>
+          <input
+            aria-describedby="basic-addon1"
+            aria-label="lname"
+            class="lname form-control form-control-sm"
+            data-testid="update-driver-lname"
+            name="lname"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="input-group"
+        >
+          <span
+            class="input-group-text"
+            id="basic-addon1"
+          >
+            Email
+          </span>
+          <input
+            aria-describedby="basic-addon1"
+            aria-label="email"
+            class="email form-control form-control-sm"
+            data-testid="update-driver-email"
+            name="email"
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          class="btn btn-outline-light btn-sm bg-primary btn btn-primary"
+          data-testid="driver-update-button"
+          type="submit"
+        >
+          Update Driver Details
+        </button>
+        <p />
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

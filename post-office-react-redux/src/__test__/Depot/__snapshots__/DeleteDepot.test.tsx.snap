@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Delete depot correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <form
+      class="deleteDepot"
+      data-testid="deleteDepot"
+    >
+      <button
+        class="button btn btn-primary"
+        data-testid="button"
+        type="submit"
+      >
+        Delete Depot
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

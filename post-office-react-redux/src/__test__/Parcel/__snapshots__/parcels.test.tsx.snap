@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders list Parcel page correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="parcels"
+    data-testid="parcels"
+  >
+    <div>
+      <div
+        class="App"
+      >
+        <div
+          class="accordion"
+        >
+          <h3
+            class="text-success text-center"
+          >
+             
+            <a
+              href="/createParcel"
+            >
+               Add a parcel 
+            </a>
+          </h3>
+          <h4
+            class="text-white"
+          >
+             
+            <u>
+              Parcels
+            </u>
+             
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

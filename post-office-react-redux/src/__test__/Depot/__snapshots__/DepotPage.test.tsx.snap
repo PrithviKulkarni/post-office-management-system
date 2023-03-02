@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Depot speific page render test 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="depotPage"
+  >
+    <div>
+      <section
+        data-testid="depotDetails"
+      />
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+      <div
+        class="updateDepot container"
+        data-testid="updateDepot"
+      >
+        <form
+          class=""
+          data-testid="create-depot-city"
+        >
+          <div
+            class="city input-group"
+          >
+            <span
+              class="input-group-text"
+              id="basic-addon1"
+            >
+              Depot City
+            </span>
+            <input
+              aria-describedby="basic-addon1"
+              aria-label="city"
+              class="form-control form-control-sm"
+              data-testid="cityIn"
+              name="city"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="workers input-group"
+            data-testid="create-driver-workers"
+          >
+            <span
+              class="input-group-text"
+              id="basic-addon1"
+            >
+              Number of Workers
+            </span>
+            <input
+              aria-describedby="basic-addon1"
+              aria-label="workers"
+              class="form-control form-control-sm"
+              data-testid="workersIn"
+              name="workers"
+              type="text"
+              value="0"
+            />
+          </div>
+          <button
+            class="button btn btn-primary"
+            data-testid="button"
+            type="submit"
+          >
+            Update Depot Details
+          </button>
+          <p />
+        </form>
+      </div>
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div
+      class="container"
+    >
+      <form
+        class="deleteDepot"
+        data-testid="deleteDepot"
+      >
+        <button
+          class="button btn btn-primary"
+          data-testid="button"
+          type="submit"
+        >
+          Delete Depot
+        </button>
+      </form>
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <form
+      class=""
+    >
+      <button
+        class="button btn btn-primary"
+        data-testid="buttonO"
+        type="submit"
+      >
+        Return
+      </button>
+    </form>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+    <div>
+         
+    </div>
+  </div>
+</DocumentFragment>
+`;
